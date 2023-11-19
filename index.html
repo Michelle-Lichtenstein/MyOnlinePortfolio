@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <body>
+        
+    
+    <!-- Header with Heading and Navbar -->
+    <header>
+        <h1>Michelle Lichtenstein</h1>
+        <nav>
+            <div class="nav-links" id="navlinks">
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education-experience">Education / Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-links-container" id="navlinks-container">
+                <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul class="mobile-nav-links">
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education-experience">Education / Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<!-- About Me Section -->
+<section id="about-me">
+    <h2>About Me</h2>
+    <div class="about-content">
+        <div class="image-column">
+            <img src="myimage.jpg" alt="My Image">
+        </div>
+        <div class="text-column">
+            <h3>More About Me</h3>
+            <p>
+                I am a 20 year old student who is currently studying Programming Foundation 
+                at CTU Training Solutions in Boksburg.
+            </p>
+
+            <h3>My Skills and Interests</h3>
+            <p>
+                I am interested in learning more about programming as well as the different 
+                programming languages that are associated with it. Currently I am still busy
+                working on my programming skills so that I can improve them as I go.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+        <div class="project">
+            <h3>Project 1</h3>
+            <img src="project1.jpg" alt="Project 1">
+            <p>For a quick view: <button onclick="window.location.href='https://lichtensteintransportandtrading.co.za/'">Visit Project 1</button></p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <img src="project2.jpg" alt="Project 2">
+            <p>For a quick view: <button onclick="window.location.href='https://project--scorpion.000webhostapp.com/index.html'">Visit Project 2</button></p>
+        </div>       
+    </div>
+</section>
+
+    <!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <p>The skills that I have learned thus far:</p>
+    <div class="skills-container">
+        <div class="skills-column">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Database Design</li>
+                        </ul>
+                    </div>
+                    <div class="back">
+                        <img src="technicalskills.jpeg" alt="Technical Skills Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-column">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="back">
+                        <img src="programminglanguages.png" alt="Programming Languages Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-column">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="back">
+                        <img src="Frameworks.png" alt="Frameworks Image">
+                    </div>
+                </div>
+            </div>
+        </div>            
+        <div class="skills-column">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <h3> Programming Tools</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Visual Studio</li>
+                            <li>Adobe XD</li>
+                        </ul>
+                    </div>
+                    <div class="back">
+                        <img src="Tools.png" alt="Tools Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education and Work Experience Section -->
+<section id="education-experience">
+    <h2>Education and Work Experience</h2>
+
+    <!-- Education Subsection -->
+    <div class="subsection" id="education">
+        <h3>Education</h3>
+        <div class="experience-item">
+            <!-- Add your education details here -->
+            <p>National Senior Certificate</p>
+            <p>Graduation Year: 2021</p>
+        </div>
+        <!-- Add more education items as needed -->
+    </div>
+
+    <!-- Work Experience Subsection -->
+    <div class="subsection" id="experience">
+        <h3>Work Experience</h3>
+        <div class="experience-item">
+            <!-- Add your work experience details here -->
+            <p>IT Specialist, Lichtenstein Transport and Trading (Pty) Ltd</p>
+            <p>Employment Period: Part Time</p>
+            <p>Job Description: Helped with the IT support for the company. Also helped with the creation of their website.</p>
+            <p>Achievements: I created my very first website for them without any guidance from the company and I built up experience with them.</p>
+        </div>
+        <!-- Add more work experience items as needed -->
+    </div>
+</section>
+
+ 
+<!-- Contact Section with Split Layout -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+        <div class="label-container">
+            <a href="mailto:michellelichtenstein03@gmail.com?subject=Subject%20Here">
+                <i class="fas fa-envelope"></i>
+                <p>Email: michellelichtenstein03@gmail.com</p>
+            </a>
+        </div>
+        <div class="label-container">
+            <a href="tel:+1234567890">
+                <i class="fas fa-phone"></i>
+                <p>Phone: +27 82 946 3190</p>
+            </a>
+        </div>
+
+        <!-- Social media icons -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/lichtenstein.michelle/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/michelle.lichtenstein.77/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.linkedin.com/in/michelle-lichtenstein-383539286/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Michelle-Lichtenstein" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <form action="https://formsubmit.co/552d05d04a924f946614e3acf3c416f0" method="POST">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_capchatch" value="false">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p> &copy; 2023 All rights reserved.</p>
+        <p>Online Portfolio created by <a href="https://yourportfolio.com" target="_blank">Michelle Lichtenstein</a></p>
+        <button onclick="downloadPDF()">ReadMe</button>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

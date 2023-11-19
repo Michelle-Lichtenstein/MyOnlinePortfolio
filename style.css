@@ -1,0 +1,518 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+}
+
+h2 {
+    font-size: 28px; /* Adjust the font size as needed */
+}
+
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #2b044f;
+    color: white;
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.header p {
+    text-align: left;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-bottom: 100px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links-container {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-container {
+        display: block;
+    }
+
+    .mobile-nav-links {
+        list-style-type: none;
+        padding: 1rem; /* Increase padding */
+        margin: 0;  
+        background-color: #333;  
+    }
+
+    .mobile-nav-links li {
+        padding: 0.1rem; 
+        color: white;
+        margin-bottom: 15px; /* Add margin to separate the items */
+    }
+
+    .mobile-nav-links li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    header h1 {
+        margin: 20px 4px; /* Add margin at the top */
+        text-align: center;
+    }
+}
+
+/* About Me Section styles */
+#about-me {
+    padding-top: 20px;
+    text-align: center;
+    padding: 2em;
+    background-color: #050505;
+    color: white;
+    margin: 20px;
+    margin-bottom: 50px; /* Add margin at the bottom */
+}
+
+.about-content {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.text-column,
+.image-column {
+    flex-basis: calc(50% - 20px); /* Set 50% width for both columns */
+    box-sizing: border-box;
+    padding: 1em;
+    border: 3px solid #646363; /* Specify border style and color */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    margin: 10px; /* Add margin between the border and content */
+}
+
+.text-column h3,
+.image-column h3 {
+    margin-bottom: 10px; /* Add margin between h3 and paragraphs */
+    font-size: 20px;
+}
+
+.text-column p,
+.image-column p {
+    margin-top: 10px; /* Add margin between paragraphs and border */
+    margin-bottom: 50px; /* Increase margin at the bottom */
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.image-column img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    max-width: 100%; /* Ensure the image does not exceed its original size */
+    border-radius: 8px; /* Optional: Add border radius for a rounded image */
+}
+
+
+
+/* Media query for smaller screens */
+@media (min-width: 768px) {
+    .text-column,
+    .image-column {
+        flex-basis: 45%; /* Set 45% width for larger screens */
+    }
+}
+
+/* Additional media query for smaller screens to make columns full width */
+@media (max-width: 767px) {
+    .text-column,
+    .image-column {
+        flex-basis: calc(100% - 20px); /* Set full width for smaller screens */
+    }
+
+    .image-column img {
+        width: 50%; /* Make the image smaller in mobile view */
+        max-width: 100%; /* Ensure the image does not exceed its original size */
+    }
+}
+
+
+/* Projects Section styles */
+#projects {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    padding: 2em;
+    background-color: #050505;
+    color: white;
+    margin: 20px;
+    margin-bottom: 50px; /* Add margin at the bottom */
+    opacity: 1; /* Change opacity to 1 initially to make the section visible */
+    transform: translateX(0); /* Change transform to 0 initially to make the section visible */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Add a class to show the project section */
+#projects {
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project {
+    width: 100%; /* Full width by default for smaller screens */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+.project h3 {
+    margin-bottom: 10px; /* Add margin between h3 and image */
+}
+
+.project img {
+    width: 100%;
+    height: auto; /* Auto height to maintain aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border: 3px solid #646363;
+    border-radius: 10px;
+}
+
+.project p {
+    margin-top: 10px;
+}
+
+/* Style for the button */
+.project button {
+    background-color: #dd08dd;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project button:hover {
+    background-color: black;
+    text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media (min-width: 768px) {
+    .project {
+        width: 45%; /* Set 45% width for larger screens */
+    }
+
+    .project img {
+        height: 200px; /* Set a specific height for the images in mobile view */
+    }
+}
+
+
+/* Skills Section styles */
+#skills {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+    padding: 2em;
+    background-color: #050505;
+    color: white;
+    margin: 20px;
+    margin-bottom: 80px; /* Add margin at the bottom */
+}
+
+.skills-container {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.skills-column {
+    flex-basis: calc(25% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+}
+
+.flip-container {
+    height: 200px;
+    perspective: 800px;
+}
+
+.flipper {
+    width: 70%;
+    height: 70%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(0deg);
+    background-color: plum;
+    color: black;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 4px solid #646363; /* Add a border with a 2px width and a color of #ccc */
+    border-radius: 8px; /* Add border radius for a rounded appearance */
+}
+
+.front::before {
+    content: ''; /* Create an empty pseudo-element for the textbox */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Initial transparent background */
+    z-index: 2; /* Place the textbox above the content but below the flip effect */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.front:hover::before {
+    background-color: rgba(255, 255, 255, 0.5); /* Change the background color on hover */
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: plum;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #646363; /* Add a border with a 2px width and a color of #ccc */
+    border-radius: 8px; /* Add border radius for a rounded appearance */
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+#education-experience {
+    text-align: center;
+    padding: 2em;
+    background-color: #050505;
+    color: white;
+    margin: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px; /* Add margin at the bottom */
+}
+
+#education-experience h2 {
+    margin-bottom: 20px; /* Add space between h2 and h3 */
+}
+
+.subsection {
+    margin-bottom: 30px;
+}
+
+#education-experience h3 {
+    margin-bottom: 15px;}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+#education-experience h3 {
+    margin-bottom: 15px; /* Add space between paragraphs */
+}
+
+/* Contact Section styles */
+/* Contact Section styles */
+#contact {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2em;
+    background-color: #050505;
+    color: white;
+    margin: 20px;
+}
+
+#contact h2 {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.contact-info {
+    flex-basis: calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: left;
+    max-width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin-bottom for space */
+}
+
+.form-container {
+    flex-basis: calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: left;
+    max-width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin-bottom for space */
+}
+
+.label-container {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label-container i {
+    margin-right: 10px; /* Add space between icon and text */
+}
+
+.label-container i {
+    margin-left: 10px; /* Adjust as needed */
+}
+
+.contact-info p {
+    margin-top: 5px; /* Adjust as needed */
+}
+
+.social-links {
+    flex-basis: 100%; /* Set full width for social links */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+/* Form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 4px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    resize: none;
+}
+
+button {
+    background-color: #dd08dd;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+button:hover {
+    background-color: black;
+    text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .contact-info,
+    .form-container {
+        flex-basis: 100%; /* Set full width for both on smaller screens */
+        max-width: none; /* Remove max-width */
+    }
+}
+
+
+/* Footer styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Add this line to remove unnecessary space */
+}
+
+html {
+    overflow-x: hidden; /* Add this line for good measure */
+}
+
+footer {
+    background-color: #2b044f;
+    color: white;
+    text-align: center;
+    padding: 2em; /* Increase the padding to make the footer bigger */
+    margin-top: auto; /* Push the footer to the bottom */
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content button {
+    margin-top: 10px; /* Add margin to the top of the button */
+}
